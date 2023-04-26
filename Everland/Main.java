@@ -5,8 +5,6 @@ import java.util.HashSet;
 
 public class Main{
 	
-	static int[] ticketList = new int[6]; // 티켓 권종
-	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		InputClass inputClass = new InputClass();
@@ -26,21 +24,8 @@ public class Main{
 		
 		ListSave save = new ListSave();
 		save.setOrderlist(ticket, ticket, cnt, Udea, price, finalprice);
-		
-		System.out.println(save.getData());
-		
-//		ticketList[0] = ticket;
-//		ticketList[1] = cc.getAge(age);
-//		ticketList[2] = cnt;
-//		ticketList[3] = Udea;
-//		ticketList[4] = price;
-//		ticketList[5] = finalprice;
-//		
-//
-//		finalPrint fp = new finalPrint();
-//		String[] info = fp.print_Finalticket(ticketList);
-//		
-//	
+
+
 //		System.out.printf("\"권종 : %s, 나이 : %s, 갯수 : %s, 우대 : %s, 가격 : %s, 할인적용가 : %s\n",
 //					info[0], info[1], info[2], info[3], info[4], info[5]);
 

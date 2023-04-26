@@ -44,5 +44,47 @@ public class calculateClass {
 
 	}
 	
+	// 티켓가격
+	public int getPrice(int age, int ticket) {
+		
+		if (age>=19 && age<=64 && ticket == 1) { // 19세 이상 64이하 주간권
+			return 56000;
+		} else if (age>=19 && age<=64 && ticket == 2) { // 19세 이상 64세이하 야간권
+			return 46000;
+		} else if (age>=13 && age<=18 && ticket == 1) { // 13세 이상 18세 이하 주간권
+			return 47000;
+		} else if (age>=13 && age<=18 && ticket == 2) { // 13세 이상 18세 이하 야간권
+			return 40000;
+		} else if (age>=3 && age<=12 && ticket == 1) { // 3세 이상 12세 이하 주간권
+			return 44000;
+		} else if (age>=3 && age<=12 && ticket == 2) { // 3세 이상 12세 이하 야간권
+			return 37000;
+		} else {
+			return 0; // 2세 이하 65세 이상
+		}
+	}
+	
+	// 우대사항 적용
+	public int getDiscount(int Udea, int price) {
+		
+		int totalPrice = 0;
+		
+		if (Udea==1){
+			totalPrice = price; // 할인적용 없음
+		} else if (Udea==2){
+			totalPrice = (int) (price *  0.6); // 할인 40
+		} else if (Udea==3){ 
+			totalPrice = (int) (price *  0.5); // 할인 50
+		} else if (Udea==4){
+			totalPrice = (int) (price *  0.8); // 할인 20
+		} else if (Udea==5){
+			totalPrice = (int) (price *  0.85); // 할인 15
+		} else {
+			totalPrice = 0; // 그외 0으로 
+		}
+
+		return totalPrice;
+	}
+	
 	
 }

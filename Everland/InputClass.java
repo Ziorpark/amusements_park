@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class InputClass {
 	Scanner sc = new Scanner(System.in);
-	
-	int[] ticketList = new int[10]; // 티켓 권종
+
+	int ticket = 3; // 티켓 권종
 	int[] id = new int[13]; // 주민번호 배열
 	String inputNumArr = ""; // 주민번호 문자열
 	int cnt = 0; // 티켓장수
@@ -13,13 +13,12 @@ public class InputClass {
 	
 	// 권종 선택
 	public int Select_ticket() {
-		int ticket = 3;
-		
+
 		while (!(ticket==1 || ticket==2)) {
 			System.out.printf("\n=========================================\n");
 			System.out.printf("권종을 선택하세요.\n1. 주간권\n2. 야간권\n");
 			ticket = sc.nextInt();
-			ticketList[0] = ticket;
+			
 		}
 		
 		return ticket;
@@ -56,7 +55,7 @@ public class InputClass {
 			cnt = sc.nextInt();
 			
 			if (cnt>=1 && cnt<=10) break;
-			ticketList[1] = cnt;
+
 		}
 		
 		return cnt;
@@ -78,7 +77,7 @@ public class InputClass {
 			if (Udea == 0 || Udea > 5) {
 				continue;
 			}
-			ticketList[2] = Udea;
+			
 			break;
 
 		}
